@@ -1,4 +1,18 @@
-const sumAll = function() {
+const sumAll = function(start, end) {
+
+    if (typeof start != "number" || typeof end != "number") {
+        return "ERROR"
+    }
+
+    if (start < 0 || end < 0) {
+        return "ERROR"
+    }
+    
+    if (start > end) {
+        [start, end] = [end, start]
+    }
+
+    return ((start+end) * ((end - start)+1))/2
 
 };
 
